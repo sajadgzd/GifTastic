@@ -29,15 +29,15 @@ $(document).ready(function() {
             console.log(response);
             console.log(queryURL);
             for (let i = 0; i < 10; i++) {
-                $(".giph").append($("<div class='holders'>"));
-                $(".holders").prepend(`<img src=${response.data[i].images.fixed_height_still.url} data-animate=${response.data[i].images.fixed_height_downsampled.url} data-still=${response.data[i].images.fixed_height_still.url} data-status='still'/>`);
-                $(".holders").prepend(`<p>Rating: ${response.data[i].rating}</p>`);
+                $(".giph").append($(`<div class='holder-${[i]}'>`));
+                $(`.holder-${[i]}`).prepend(`<img src=${response.data[i].images.fixed_height_still.url} data-animate=${response.data[i].images.fixed_height_downsampled.url} data-still=${response.data[i].images.fixed_height_still.url} data-status='still'/>`);
+                $(`.holder-${[i]}`).prepend(`<p>Rating: ${response.data[i].rating}</p>`);
             }
 
         })
     });
 
-    $(document).on("click", ".holders", function() {
+    $(document).on("click", "img", function() {
         if ($(this).attr("data-status") === "still") {
             var animate = $(this).attr("data-animate");
             $(this).attr("src", animate);
