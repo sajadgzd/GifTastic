@@ -32,6 +32,7 @@ $(document).ready(function() {
                 $(".giph").prepend($(`<div class='holder-${[i]} holders' >`));
                 $(`.holder-${[i]}`).append(`<img src=${response.data[i].images.fixed_height_still.url} data-animate=${response.data[i].images.fixed_height_downsampled.url} data-still=${response.data[i].images.fixed_height_still.url} data-status='still'/>`);
                 $(`.holder-${[i]}`).prepend(`<p>Rating: ${response.data[i].rating}</p>`);
+                $(`.holder-${[i]}`).prepend(`<div>Title: ${response.data[i].title}</div>`);
             }
 
         })
