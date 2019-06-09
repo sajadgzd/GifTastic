@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var list = ["horse", "dog", "cat"];
+    var list = ["horse", "dog", "cat", "bird"];
     // var key = Wohrfl96PkbUD9MWz44E12WzGd9ODdrD;
     var queryURLbase = "https://api.giphy.com/v1/gifs/search?api_key=Wohrfl96PkbUD9MWz44E12WzGd9ODdrD";
     displayButtons();
@@ -29,7 +29,7 @@ $(document).ready(function() {
             console.log(response);
             console.log(queryURL);
             for (let i = 0; i < 10; i++) {
-                $(".giph").append("<img class='holders' src=" + response.data[i].images.fixed_height_still.url + "</img>")
+                $(".giph").prepend("<img class='holders' src=" + response.data[i].images.fixed_height_still.url + "</img>")
             }
 
         })
