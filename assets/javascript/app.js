@@ -28,6 +28,10 @@ $(document).ready(function() {
         }).then(function(response) {
             console.log(response);
             console.log(queryURL);
+            for (let i = 0; i < 10; i++) {
+                $(".giph").append("<img class='holders' src=" + response.data[i].images.fixed_height_still.url + "</img>")
+            }
+
         })
     });
 

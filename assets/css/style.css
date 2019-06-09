@@ -2,9 +2,10 @@
     margin: 2%;
 }
 
-.holders {
+img {
     display: inline-block;
-    margin-left: 2%;
+    /* margin-left: 2%; */
+    margin: 2%;
 }
 
 .wallpaper {
