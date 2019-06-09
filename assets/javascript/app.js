@@ -18,6 +18,8 @@ $(document).ready(function() {
             $(".category").append("<button class='buttons' data-name=" + list[i] + ">" + list[i] + "</button>");
         }
     }
+
+
     // var queryURL = queryURLbase + "&q=" + userInput;
 
     // $.ajax({
