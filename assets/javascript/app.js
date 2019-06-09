@@ -20,7 +20,7 @@ $(document).ready(function() {
     }
 
     $(document).on("click", ".buttons", function() {
-
+        $(".giph").empty();
         var queryURL = queryURLbase + "&q=" + $(this).attr("data-name");
         $.ajax({
             url: queryURL,
@@ -29,7 +29,9 @@ $(document).ready(function() {
             console.log(response);
             console.log(queryURL);
             for (let i = 0; i < 10; i++) {
-                $(".giph").prepend(`<img class='holders' src=${response.data[i].images.fixed_height_still.url} data-animate=${response.data[i].images.fixed_height_downsampled.url} data-still=${response.data[i].images.fixed_height_still.url} data-status='still'/>`)
+                $(".giph").append($("<div class='holders'>"));
+                $(".holders").prepend(`<img src=${response.data[i].images.fixed_height_still.url} data-animate=${response.data[i].images.fixed_height_downsampled.url} data-still=${response.data[i].images.fixed_height_still.url} data-status='still'/>`);
+                $(".holders").prepend(`<p>Rating: ${response.data[i].rating}</p>`);
             }
 
         })
