@@ -11,21 +11,28 @@
 <body class="wallpaper">
     <div class="container">
         <div class="row">
-            <h1 class="header">Giphy App</h1>
+            <h2 class="header">Giphy App</h2>
         </div>
         <div class="category"></div>
-        <br>
+        <!-- <br> -->
         <div class="row">
-            <div class="col-lg-2">
-                <form id="cartoons-form">
+            <div class="col-lg-12">
+                <!-- <form id="cartoons-form">
                     <label for="cartoons-input">Add a Giph</label>
                     <input type="text" id="cartoons-input">
                     <br>
                     <br>
                     <input id="add-cartoons" type="submit" value="Add">
+                </form> -->
+                <form id="cartoons-form">
+                    <div class="form-group">
+                        <label for="cartoons-input"><h5>Add a Giph</h5></label>
+                        <input type="text" class="form-control" id="cartoons-input">
+                    </div>
+                    <button id="add-cartoons" type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
-            <div class="col-lg-10">
+            <div class="col-lg-12">
                 <div class="row giph"></div>
             </div>
 

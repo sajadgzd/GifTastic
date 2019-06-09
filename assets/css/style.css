@@ -20,3 +20,16 @@
 .wallpaper {
     background-color: lightblue;
 }
+
+#cartoons-form {
+    text-align: center;
+}
+
+.form-group {
+    width: 200px;
+    margin: 5px auto;
+}
+
+label {
+    margin-bottom: 0;
+}
