@@ -19,15 +19,20 @@ $(document).ready(function() {
         }
     }
 
+    $(document).on("click", ".buttons", function() {
 
-    // var queryURL = queryURLbase + "&q=" + userInput;
+        var queryURL = queryURLbase + "&q=" + $(this).attr("data-name");
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response) {
+            console.log(response);
+            console.log(queryURL);
+        })
+    });
 
-    // $.ajax({
-    //     url: queryURL,
-    //     method: "GET"
-    // }).then(function(response) {
-    //     console.log(response);
-    // })
+
+
 
 
 });
