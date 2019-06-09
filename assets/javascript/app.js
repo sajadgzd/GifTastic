@@ -29,8 +29,8 @@ $(document).ready(function() {
             console.log(response);
             console.log(queryURL);
             for (let i = 0; i < 10; i++) {
-                $(".giph").append($(`<div class='holder-${[i]} holders' >`));
-                $(`.holder-${[i]}`).prepend(`<img src=${response.data[i].images.fixed_height_still.url} data-animate=${response.data[i].images.fixed_height_downsampled.url} data-still=${response.data[i].images.fixed_height_still.url} data-status='still'/>`);
+                $(".giph").prepend($(`<div class='holder-${[i]} holders' >`));
+                $(`.holder-${[i]}`).append(`<img src=${response.data[i].images.fixed_height_still.url} data-animate=${response.data[i].images.fixed_height_downsampled.url} data-still=${response.data[i].images.fixed_height_still.url} data-status='still'/>`);
                 $(`.holder-${[i]}`).prepend(`<p>Rating: ${response.data[i].rating}</p>`);
             }
 
