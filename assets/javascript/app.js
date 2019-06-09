@@ -15,7 +15,7 @@ $(document).ready(function() {
     function displayButtons() {
         $(".category").empty();
         for (let i = 0; i < list.length; i++) {
-            $(".category").append("<button class='buttons' data-name=" + list[i] + ">" + list[i] + "</button>");
+            $(".category").append("<button class='buttons btn btn-primary' data-name=" + list[i] + ">" + list[i] + "</button>");
         }
     }
 
