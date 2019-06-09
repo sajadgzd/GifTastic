@@ -29,15 +29,22 @@ $(document).ready(function() {
             console.log(response);
             console.log(queryURL);
             for (let i = 0; i < 10; i++) {
-                $(".giph").prepend(`<img class='holders' src=${response.data[i].images.fixed_height_still.url} data-animate=${response.data[i].images.fixed_height_downsampled.url} />`)
+                $(".giph").prepend(`<img class='holders' src=${response.data[i].images.fixed_height_still.url} data-animate=${response.data[i].images.fixed_height_downsampled.url} data-still=${response.data[i].images.fixed_height_still.url} data-status='still'/>`)
             }
 
         })
     });
 
     $(document).on("click", ".holders", function() {
-        var animate = $(this).attr("data-animate")
-        $(this).attr("src", animate);
+        if ($(this).attr("data-status") === "still") {
+            var animate = $(this).attr("data-animate");
+            $(this).attr("src", animate);
+            $(this).attr("data-status", "animated");
+        } else {
+            var still = $(this).attr("data-still");
+            $(this).attr("src", still);
+            $(this).attr("data-status", "still");
+        }
     })
 
 
