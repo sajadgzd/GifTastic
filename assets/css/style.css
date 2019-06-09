@@ -2,7 +2,16 @@
     margin: 2%;
 }
 
-img {
+.category {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header {
+    margin: 0 auto;
+}
+
+.holders {
     display: inline-block;
     /* margin-left: 2%; */
     margin: 2%;
